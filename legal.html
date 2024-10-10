@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <header>
+        <h1>Relatório de redes sociais</h1>
+        <nav>
+            <a href="index.html">Mundo</a>
+            <a href="#">Minha escola</a>
+        </nav>
+    </header>
+    <main class="graficos-section">
+        <section id="graficos-container" class="graficos-container">
+          <section id="graficos-container" class="graficos-container">
+    <div id="graficoUsuarios" style="width: 100%; height: 400px;"></div>
+    <script>
+        // Dados do gráfico
+        const redesSociais = ['Pessoa legal', 'Pessoa esstranha', 'QUEM se importa?', 'brawl stars gamer', 'TikToker'];
+        const quantidadeUsuarios = [2.89, 1.48, 0.45, 0.9, 1.0]; // em bilhões
+
+        const trace = {
+            x: redesSociais,
+            y: quantidadeUsuarios,
+            type: 'bar'
+        };
+
+        const data = [trace];
+
+        const layout = {
+            title: 'Quantidade de Usuários por Rede Social (em bilhões)',
+            xaxis: {
+                title: 'Redes Sociais'
+            },
+            yaxis: {
+                title: 'Quantidade de Usuários (bilhões)'
+            }
+        };
+
+        Plotly.newPlot('graficoUsuarios', data, layout);
+    </script>
+</section>
+
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Gui Lima</p>
+    </footer>
+    <script type="module" src="graficos/common.js"></script>
+    <script type="module" src="graficos/informacoesGlobais.js"></script>
+    <script type="module" src="graficos/quantidadeUsuarios.js"></script>
+</body>
+</html>
